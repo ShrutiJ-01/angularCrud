@@ -15,8 +15,8 @@ export class TaskService {
   getAll(): AngularFirestoreCollection<Task> {
     return this.tasksRef;
   }
-  create(tutorial: Task): any {
-    return this.tasksRef.add({ ...tutorial });
+  create(task: Task): any {
+    return this.tasksRef.add({ ...task });
   }
   update(id: string, data: any): Promise<void> {
     return this.tasksRef.doc(id).update(data);
