@@ -9,14 +9,24 @@ import { AppComponent } from './app.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { TaskDetailsComponent } from './components/task-details/task-details.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
-
+import { JumpstartPlaygroundComponent } from './components/jumpstart-playground/jumpstart-playground.component';
+import { JumpstartComponentsModule } from '@wk/components-angular13';
+import { CardTabComponent } from './components/card-tab/card-tab.component';
+import { DemoBannerComponent } from './components/demo-banner/demo-banner.component';
+import { DemoSearchComponent } from './components/demo-search/demo-search.component';
+import { DemoBrowseTreeComponent } from './components/demo-browse-tree/demo-browse-tree.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddTaskComponent,
     TaskDetailsComponent,
-    TaskListComponent
+    TaskListComponent,
+    JumpstartPlaygroundComponent,
+    CardTabComponent,
+    DemoBannerComponent,
+    DemoSearchComponent,
+    DemoBrowseTreeComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +34,7 @@ import { TaskListComponent } from './components/task-list/task-list.component';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // for firestore
+    JumpstartComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
